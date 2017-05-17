@@ -26,7 +26,12 @@ object BittrexApi extends App {
   val mapper: ObjectMapper = new ObjectMapper
   val getCurrencies = mapper.readValue(body, classOf[GetCurrencies])
 
-  println(getCurrencies)
+  //println(getCurrencies)
+
+
+  private val acoount: String = Http("https://bittrex.com/api/v1.1/account/getorderhistory").asString.body
+  print(acoount)
+
 
 
 }
