@@ -40,6 +40,7 @@ public class HttpGet {
 
             ObjectMapper mapper = new ObjectMapper();
 
+
             GetCurrencies getCurrencies = mapper.readValue(responseStr, GetCurrencies.class);
 
             List<CurrentInfo> result = getCurrencies.getResult();
